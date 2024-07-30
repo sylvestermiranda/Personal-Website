@@ -372,10 +372,13 @@ nav .fa-solid {
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/mee.png);
+        background-image: url(images/Me1.png);
         background-size:cover;
         background-position:30%;
-    
+    }
+    .name{
+        font-size:35px;
+        text-shadow:none;
     }
     .header-text{
         margin-top: 100%;
