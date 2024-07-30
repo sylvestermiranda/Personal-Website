@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <script src="https://kit.fontawesome.com/d5622e0592.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sylvester Miranda</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav> 
+                <div class="logo"> SM </div>
+                <ul id="sidemenu"> 
+                    <li><a href="#header"> Home </a></li>
+                    <li><a href="#about"> About </a></li>
+                    <li><a href="#projects"> Projects </a></li>
+                    <li><a href="#contact"> Contact </a></li>
+                    <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p> CSE student</p>
+                <h1> Hi, I'm <span>Sylvester</span><br>Miranda <br> From India</h1>
+            </div>
+        </div>
+    </div>
+  <!--------------------------about----------------------------->  
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Me2.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"> About Me </h1>
+                    <p> Hello! I'm <b> Sylvester Miranda </b> from <b> Karwar, Karnataka, India </b> Currently pursuing <b> BE </b>in<b> CSE </b> at <b>St Joseph Engineering College mangalore.</b> 
+                        I'm a tech enthusiast and always happy to learn about new incredible emerging technologies and give a deeper dive into them... I also love to find solution to problems in tech as it is more interesting to me,
+                        and also especially in this new era of AI there is much more to explore, It's just the beginning for me to learn this new things.. 
+                    </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('hobbies')"> Hobbies </p>
+                            <p class="tab-links" onclick="opentab('experience')">Languages and tools</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span> UI/UX </span><br> Designing web</li>
+                                <li><span> Web Development </span><br> Websites </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents " id="experience">
+                            <ul>
+                                <li><span> Languages </span><br>   
+                                    <img class="language" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C Programming Language" />
+                                    <img class="language" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++ Programming Language" />
+                                    <img class="language" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python Programming Language" />
+                                    <img class="language" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" />
+                                    <img class="language" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" /> </li>
+                                <li><span> Tools </span><br>  
+                                    <img class="tools" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
+                                    <img class="tools" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />  </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="hobbies">
+                            <ul>
+                                <li><span> 1: </span> Freelancing </li>
+                                <li><span> 2: </span> Singing </li>
+                                <li><span> 3: </span> Playing Piano </li>
+                                <li><span> 4: </span> Travelling </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span> Bachelor of Engineering in Computer Science and Engineering (ongoing) </span> <br> St Joseph Engineering College, Mangalore <br> Course : BE in CSE</li>
+                                <li><span> PUC (11-12th)  </span> <br> GOVT. PUC college, Karwar <br> Stream : PCMB </li>
+                                <li><span> Primary and high school (1-10th) </span> <br> St Joseph English medium high school, karwar </li>
+                            </ul>
+                        </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------- Projects --------------------------->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title"> My Projects </h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2> ios-calculator </h2>
+                    <p> Developed a clone of an ios calculator which can do basic math calculations and is made using pure
+                        html, css and some basic javascript. 
+                    </p>
+                    <a href="projects/ios-calculator.html"> <i class="fa-solid fa-arrow-up-right-from-square" id="link-icon"></i> Check out here </a>
+                </div>   
+                <div>
+                    <i class="fa-solid fa-circle-info"></i>
+                    <h2> ongoing.. </h2>
+                    <p> Developing a clone of an amazon website where users can add and remove the products from the cart
+                        it will display the total cost of the products which were added to the cart...
+                    </p>
+                    <a href="#">   </a>
+                </div>   
+                <div>
+                    <i class="fa-solid fa-circle-info"></i>
+                    <h2> ongoing.. </h2>
+                    <p> Developing a rock, paper, scissors game where a user can play the game with computer..
+                    </p>
+                    <a href="#"> </a>
+                </div>   
+            </div>
+        </div>
+    </div>
+
+
+
+    <!------------------------- contact ------------------------------>
+    <div id="contact">
+        <div class="container">
+             <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title"> Contact Me</h1>
+                    <div class="contact-button" id="contact-button"> <i class="fa-solid fa-phone" id="call"></i> <i class="fa-solid fa-envelope" id="call"></i></div>
+                    <div id="blur-background"></div>
+                    <div class="popup">
+                        <div class="popup-content">
+                            <span class="close">&times;</span>
+                            <h2>Contact Details:</h2>
+                            <p>Name: Sylvester Miranda</p>
+                            <p>Email: sylvestermiranda06@gmail.com</p>
+                            <p>Phone: 8495056068 </p>
+                        </div>
+                    </div>  
+                   
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"> </span>
+                    
+                </div>
+             </div>
+        </div>
+        <div class="copyright">
+            <div class="social-icons">
+                <p class="follow"> Follow me on </p> 
+                <a target="_blank" href="https://www.linkedin.com/in/sylvester-miranda-719630297/"> <i class="fa-brands fa-linkedin"> </i> </a> 
+                <a target="_blank" href="https://www.instagram.com/sylvestermiranda_25/#"> <i class="fa-brands fa-instagram"> </i> </a>  
+                <a target="_blank" href="https://www.facebook.com/sylvester.miranda.98?mibextid=ZbWKwL"> <i class="fa-brands fa-facebook"> </i> </a> 
+                <a href="#"> <i class="fa-brands fa-x-twitter"> </i> </a>  
+                <a href="#"> <i class="fa-brands fa-github"> </i> </a> 
+            </div>
+            <p> &#169 2024. Sylvester Miranda. All rights reserved </p>
+        </div>
+    </div>
+
+    <!--------------------- Javascript ---------------------->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzIV1rP2Ds9cTZU3lx_cyvxWtFdH1iSUKKdafLF9YLT3ogb_Cr6aPgMLrWUieCQRQtovQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    
+    <script>
+        /* tabs management */
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+ 
+    function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+    </script>
+    <script>
+    /* contact me */
+
+    document.getElementById('contact-button').addEventListener('click', function() {
+        document.querySelector('.popup').style.display = 'flex';
+        document.getElementById('blur-background').style.display = 'flex';
+    });
+
+    document.querySelector('.close').addEventListener('click', function() {
+        document.querySelector('.popup').style.display = 'none';
+        document.getElementById('blur-background').style.display = 'none';
+    });
+ 
+
+    </script>
+
+    <script> 
+
+    /* side menu operations */
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+             sidemenu.style.right="-200px";
+        }
+
+    </script>
+</body>
+</html>
