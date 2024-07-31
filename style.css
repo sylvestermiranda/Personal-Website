@@ -163,6 +163,7 @@ nav ul li a:hover::after{
     font-family: 'roboto';    
 }
 .name{
+    color: #ff004f;
     font-size: 60px;
 }
 
