@@ -118,7 +118,6 @@ nav{
     color: #fff;
 }
 span{
-    color:#ff004f;
     font-size: 50px;
     font-family: 'roboto';
 }
@@ -154,13 +153,18 @@ nav ul li a:hover::after{
     font-size: 60px;
     margin-top: 20px;
 }
-.header-text h1 span{
-  color:#ff004f;
-}
-
 .name{
     font-size: 60px;
 }
+.red{
+    color: orange;
+    font-size: 60px;
+    font-family: 'roboto'; 
+}
+.green{
+    color: green;
+    font-size: 60px;
+    font-family: 'roboto';
 
 /* ----------------------aobut-----------------------*/
 #about{
@@ -474,6 +478,12 @@ nav .fa-solid {
     }
     .name{
         font-size: 30px;
+    }
+    .red{
+        font-size:30px;
+    }
+    .green{
+        font-size:30px;
     }
     nav .fa-solid {
         display: block;
