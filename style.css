@@ -165,6 +165,7 @@ nav ul li a:hover::after{
     color: green;
     font-size: 60px;
     font-family: 'roboto';
+}
 
 /* ----------------------aobut-----------------------*/
 #about{
