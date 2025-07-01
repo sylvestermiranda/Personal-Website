@@ -1,302 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
-    <link rel="icon" href="images/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Under Maintenance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <script src="https://kit.fontawesome.com/d5622e0592.js" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sylvester Miranda</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    body {
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      background: linear-gradient(-45deg, #1e1f26, #232526, #3a3a52, #1e1f26);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    .glass {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+      color: #ffffff;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #ffc107;
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bokor&display=swap" rel="stylesheet">
+    p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: #e0e0e0;
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-     
+    .loader {
+      margin: 30px auto;
+      width: 48px;
+      height: 48px;
+      border: 5px solid rgba(255, 255, 255, 0.2);
+      border-top-color: #ffc107;
+      border-radius: 50%;
+      animation: spin 1s ease infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    #countdown {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: #bbbbbb;
+    }
+
+    @media (max-width: 600px) {
+      .glass {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      #countdown {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    
-    <div class="loader">
-        <div class="ring"></div>
-        <div class="ring"></div>
-        <div class="ring"></div>
-        <span class="loading">Loading...</span>
-    </div>
-    <div id="header">
-        <div class="container">
-            <nav> 
-                <div class="logo"><a href="#header"> SM </a></div>
-                <ul id="sidemenu"> 
-                    <li><a href="#header"> Home </a></li>
-                    <li><a href="#about"> About </a></li>
-                    <li><a href="#projects"> Projects </a></li>
-                    <li><a href="#contact"> Contact </a></li>
-                    <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <div class="intr">
-                <h1> Hi, I'm <br> <span class="name">Sylvester Miranda </span> <br>  <p class="branch"> CSE student</p> </h1></div>
-                <div class="me"><img src="images/Me.jpg" alt=""></div>
-            </div>
-            
-        </div>
-    </div>
-  <!--------------------------about----------------------------->  
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/Me2.webp">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title"> About Me </h1>
-                    <p class="inform"> Hello! I'm <b> Sylvester Miranda </b> from <b> Karwar, Karnataka, India </b> Currently pursuing <b> BE </b>in<b> CSE </b> at <b>St Joseph Engineering College mangalore.</b> 
-                        I'm a tech enthusiast and always happy to learn about new incredible emerging technologies and give a deeper dive into them... I also love to find solution to problems in tech as it is more interesting to me,
-                        and also especially in this new era of AI there is much more to explore, It's just the beginning for me to learn this new things.. 
-                    </p>
-                    <hr>
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('hobbies')"> Hobbies </p>
-                            <p class="tab-links" onclick="opentab('experience')"> L&T</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
-                        </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><span> UI/UX </span><br> Designing web</li>
-                                <li><span> Web Development </span><br> Websites </li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents "id="experience">
-                            <ul>
-                                <li><span> Languages </span><br>   
-                                    <img class="language" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C Programming Language" />
-                                    <img class="language" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++ Programming Language" />
-                                    <img class="language" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python Programming Language" />
-                                    <img class="language" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" />
-                                    <img class="language" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" /> </li>
-                                <li><span> Tools </span><br>  
-                                    <img class="tools" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
-                                    <img class="tools" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />  </li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="hobbies">
-                            <ul>
-                                <li><span> * &nbsp; </span> Freelancing </li>
-                                <li><span> * &nbsp; </span> Singing </li>
-                                <li><span> * &nbsp; </span> Playing Piano </li>
-                                <li><span> * &nbsp; </span> Travelling </li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span> Bachelor of Engineering in Computer Science and Engineering (ongoing) </span> <br> St Joseph Engineering College, Mangalore <br> Course : BE in CSE</li>
-                                <li><span> PUC (11-12th)  </span> <br> GOVT. PUC college, Karwar <br> Stream : PCMB </li>
-                                <li><span> Primary and high school (1-10th) </span> <br> St Joseph English medium high school, karwar </li>
-                            </ul>
-                        </div>
-                </div>    
-            </div>
-        </div>
-    </div>
+  <div class="glass">
+    <h1>🚧 My Portfolio is Getting an Upgrade</h1>
+    <p>I'm currently working on improvements to make this site even better.<br>It'll be back online shortly — stay tuned!</p>
+    <div class="loader"></div>
+    <div id="countdown">Launching in: --d --h --m --s</div>
+    <footer>— Sylvester Miranda • 2025</footer>
+  </div>
 
-    <!--------------------------- Projects --------------------------->
-    <div id="projects">
-        <div class="container">
-            <h1 class="sub-title"> My Projects </h1>
-            <div class="projects-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2> ios-calculator </h2>
-                    <p> Developed a clone of an ios calculator which can do basic math calculations and is made using pure
-                        html, css and some basic javascript. 
-                    </p>
-                    <a href="projects/ios-calculator.html"> <i class="fa-solid fa-arrow-up-right-from-square" id="link-icon"></i> Check out here </a>
-                </div>   
-                <div>
-                    <i class="fa-solid fa-circle-info"></i>
-                    <h2> ongoing.. </h2>
-                    <p> Developing a clone of an amazon website where users can add and remove the products from the cart
-                        it will display the total cost of the products which were added to the cart...
-                    </p>
-                    <a href="#">   </a>
-                </div>   
-                <div>
-                    <i class="fa-solid fa-circle-info"></i>
-                    <h2> ongoing.. </h2>
-                    <p> Developing a rock, paper, scissors game where a user can play the game with computer..
-                    </p>
-                    <a href="#"> </a>
-                </div>   
-            </div>
-        </div>
-    </div>
+  <script>
+    const countdownEl = document.getElementById("countdown");
 
+    const launchDate = new Date("2025-07-16T10:00:00").getTime(); // Change to your desired launch date/time
 
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
 
-    <!------------------------- contact ------------------------------>
-    <div id="contact">
-        <div class="container">
-             <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title"> Contact Me</h1>
-                    <div class="contact-button" id="contact-button"> <i class="fa-solid fa-phone" id="call"></i> <i class="fa-solid fa-envelope" id="call"></i></div>
-                    <div id="blur-background"></div>
-                    <div class="popup">
-                        <div class="popup-content">
-                            <span class="close">&times;</span>
-                            <h2>Contact Details:</h2>
-                            <p>Name: Sylvester Miranda</p>
-                            <p>Email: sylvestermiranda06@gmail.com</p>
-                            <p>Phone: 8495056068 </p>
-                        </div>
-                    </div>  
-                   
-                </div>
-                <div class="contact-right">
-                    <form id="contactForm" class="contact-form">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        <textarea id="message" name="message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="formResponseMessage"></span>
-                    
-                    
-                </div>
-             </div>
-        </div>
-        <div class="copyright">
-            <div class="social-icons">
-                <p class="follow"> Follow me on </p> 
-                <a target="_blank" href="https://www.linkedin.com/in/sylvester-miranda-719630297/"> <i class="fa-brands fa-linkedin"> </i> </a> 
-                <a target="_blank" href="https://www.instagram.com/sylvestermiranda_25/#"> <i class="fa-brands fa-instagram"> </i> </a>  
-                <a target="_blank" href="https://www.facebook.com/sylvester.miranda.98?mibextid=ZbWKwL"> <i class="fa-brands fa-facebook"> </i> </a> 
-                <a href="#"> <i class="fa-brands fa-x-twitter"> </i> </a>  
-                <a href="#"> <i class="fa-brands fa-github"> </i> </a> 
-            </div>
-            <p> &#169 2025 Sylvester Miranda | All rights reserved </p>
-        </div>
-    </div>
-    <div class="glow"></div>
+      if (distance < 0) {
+        countdownEl.innerHTML = "We're back online! 🎉";
+        return;
+      }
 
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    <script src="vanilla-tilt.min.js"></script>
-    <script>
-      VanillaTilt.init(document.querySelectorAll(".me"),{
-      glare: true,
-       
-      "max-glare": 0.2
-    });  
-    </script>
+      countdownEl.innerHTML = `Launching in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    };
 
-    <!--------------------- Javascript ---------------------->
-
-    <script type="module" src="database.js"></script>
-
-    <script>
-        const glow = document.querySelector('.glow');
-
-        // Function to update the glow position
-        function updateGlowPosition(e) {
-            const x = e.pageX;
-            const y = e.pageY;
-
-            // Update the position of the glow
-            glow.style.left = `${x}px`;
-            glow.style.top = `${y}px`;
-        }
-
-        // Use requestAnimationFrame to ensure smooth updates
-        document.addEventListener('mousemove', (e) => {
-            requestAnimationFrame(() => {
-                updateGlowPosition(e);
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const loader = document.querySelector(".loader");
-            setTimeout(() => {
-                loader.classList.add("loader-hidden");
-            }, 2000);  
-        });
-
-    </script>
-    
- 
-    <script>
-        /* tabs management */
-    var tablinks=document.getElementsByClassName("tab-links");
-    var tabcontents=document.getElementsByClassName("tab-contents");
- 
-    function opentab(tabname){
-    for(tablink of tablinks){
-        tablink.classList.remove("active-link");
-    }
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
-}
-    </script>
-    <script>
-
-    /* contact me */
-
-    document.getElementById('contact-button').addEventListener('click', function() {
-        document.querySelector('.popup').style.display = 'flex';
-        document.getElementById('blur-background').style.display = 'flex';
-    });
-
-    document.querySelector('.close').addEventListener('click', function() {
-        document.querySelector('.popup').style.display = 'none';
-        document.getElementById('blur-background').style.display = 'none';
-    });
- 
-
-    </script>
-
-    <script> 
-
-    /* side menu operations */
-
-        var sidemenu = document.getElementById("sidemenu");
-
-        function openmenu(){
-            sidemenu.style.right="0";
-        }
-        function closemenu(){
-             sidemenu.style.right="-200px";
-        }
-
-    </script>
+    updateCountdown();  
+    setInterval(updateCountdown, 1000);  
+  </script>
 </body>
 </html>
