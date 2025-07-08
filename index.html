@@ -1,0 +1,277 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--Google analytics-->
+    <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FW4BRFX8Z4"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+    gtag('config', 'G-FW4BRFX8Z4');
+   </script>
+    
+    <title>Sylvester Miranda | Under Maintenance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        height: 100vh;
+        background: linear-gradient(-45deg, #1e1f26, #232526, #3a3a52, #1e1f26);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(50px) scale(0.95);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      .glass {
+        animation: fadeInUp 0.4s ease-in both;
+      }
+      
+      @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      .glass {
+        position: relative;
+        background: rgba(0, 0, 0, 0.622);
+        border: 1px solid rgb(255, 255, 255);
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        padding: 40px 30px;
+        text-align: center;
+        max-width: 600px;
+        width: 100%;
+        color: #ffffff;
+        box-shadow: 0px 2px 30px rgb(127, 90, 214);
+        z-index: 2;
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-family: 'New Rocker';
+        margin-bottom: 10px;
+        margin-top: 20px;
+        color: #ffffff;
+        text-shadow: 0 0 2px #fc0000, 0 0 5px #7f4bee;
+        min-height: 4.5em;
+      }
+
+      #typewriter {
+        display: inline;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+      #cursor {
+        display: inline;
+        color: #ffffff;
+        animation: blink 0.7s infinite;
+      }
+
+      @keyframes blink {
+        0%, 50%, 100% { opacity: 1; }
+        25%, 75% { opacity: 0; }
+      }
+
+      .progress-label {
+        font-size: 0.95rem;
+        color: #90e0ef;
+        margin-bottom: 8px;
+        margin-top: -10px;
+      }
+
+      .progress-bar-container {
+        width: 100%;
+        height: 8px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+
+      .progress-bar-fill {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(to right, #00c9ff, #92fe9d);
+        border-radius: 10px;
+        transition: width 0.5s ease-in-out;
+      }
+
+      p {
+        font-size: 1.15rem;
+        line-height: 1.6;
+        color: #e0e0e0;
+      }
+
+      .loader {
+        margin: 30px auto;
+        width: 48px;
+        height: 48px;
+        border: 5px solid rgba(255, 255, 255, 0.2);
+        border-top-color: #ffc107;
+        border-radius: 50%;
+        animation: spin 1s ease infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      #countdown {
+        margin-top: 20px;
+        font-size: 1.1rem;
+        color: #fff;
+        font-weight: 500;
+      }
+
+      footer {
+        margin-top: 30px;
+        font-size: 0.85rem;
+        color: #bbbbbb;
+      }
+
+      .music-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        padding: 8px 12px;
+        background-color: #ffc107;
+        color: #000;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+        z-index: 3;
+      }
+
+      .music-btn:hover {
+        background-color: #ffdb4d;
+      }
+    </style>
+  </head>
+  <body>
+
+    <audio id="bg-music" loop>
+      <source src="music/Tactics.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <div class="glass">
+      <button class="music-btn" id="musicToggle">Play Music</button>
+
+      <h1><span id="typewriter"></span><span id="cursor">|</span></h1>
+
+
+      <div class="progress-label">Upgrading to Modern Stack...</div>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progressBar"></div>
+      </div>
+
+      <p>I'm currently working on improvements to make this site even better.<br>It'll be back online shortly — stay tuned!</p>
+      <div class="loader"></div>
+      <div id="countdown">Launching in: --d --h --m --s</div>
+      <footer>— Sylvester Miranda • 2025</footer>
+    </div>
+
+  <script>
+    const fullText = "🚧 Exciting Changes Ahead - My Portfolio is Getting an Upgrade!";
+    const typewriter = document.getElementById("typewriter");
+    const cursor = document.getElementById("cursor");
+
+    let index = 0;
+    function type() {
+      if (index < fullText.length) {
+        typewriter.textContent += fullText.charAt(index);
+        index++;
+        setTimeout(type, 50);
+      } else {
+        cursor.style.display = 'inline';
+      }
+    }
+    type();
+
+    const countdownEl = document.getElementById("countdown");
+    const progressBar = document.getElementById("progressBar");
+
+    const launchDate = new Date("2025-07-16T10:00:00").getTime(); 
+    const initialStartDate = new Date("2025-07-01T10:00:00").getTime(); 
+
+    function updateCountdownAndProgress() {
+      const now = Date.now();
+      const distance = launchDate - now;
+
+      if (distance <= 0) {
+        countdownEl.innerHTML = "We're back online! 🎉";
+        progressBar.style.width = "100%";
+        return;
+      }
+
+    
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdownEl.innerHTML = `Launching in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      
+      const totalDuration = launchDate - initialStartDate;
+      const elapsed = now - initialStartDate;
+      const percent = Math.min((elapsed / totalDuration) * 100, 100);
+      progressBar.style.width = percent + "%";
+
+      requestAnimationFrame(updateCountdownAndProgress);
+    }
+
+    updateCountdownAndProgress();
+
+    
+    const music = document.getElementById("bg-music");
+    const musicToggle = document.getElementById("musicToggle");
+
+    musicToggle.addEventListener("click", () => {
+      if (music.paused) {
+        music.play();
+        musicToggle.textContent = "Stop Music";
+      } else {
+        music.pause();
+        musicToggle.textContent = "Play Music";
+      }
+    });
+  </script>
+
+  </body>
+  </html>
